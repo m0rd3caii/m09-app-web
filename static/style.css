@@ -1,0 +1,31 @@
+body { background-color: rgb(177, 237, 255);}
+form { color: rgb(0, 0, 0); background-color: rgb(112, 134, 245); display: block; float: left;}
+a {
+    color: red;
+}
+
+
+h1 {background-color: aqua;
+    text-align: center;}
+
+h2, h3 {text-align: center;}
+
+.text-enlace, .text-enlace2 {text-align:right}
+.text-enlace {margin-top: 30px;}
+
+.required:after {   content:"*";
+                    color:red}
+
+form{
+    padding: 20px;
+    padding-bottom: 60px;
+    margin-left: 860px;
+    display: block;
+}
+
+footer{
+    display: block;
+    margin-top: 300px;
+    background-color: aqua;
+    text-align: center;
+}
