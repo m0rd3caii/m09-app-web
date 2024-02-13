@@ -11,7 +11,8 @@ datos.mydb
 @app.route('/mail/<name>')
 def mail(name):
    result = datos.get_data(name)
-   return render_template('resultado.html', result = result)
+   resultado = True
+   return render_template('getmailform.html', result = result, resultado = resultado)
     
 
 @app.route('/getmail',methods = ['POST', 'GET'])
@@ -22,7 +23,7 @@ def getmail():
       return redirect(url_for('mail',name = user))
    else:
       user = request.args.get('name')
-      return render_template('login.html')
+      return render_template('getmailform.html')
 
 
 @app.route('/addmail',methods = ['POST', 'GET'])
@@ -31,7 +32,8 @@ def addmail():
       user = request.form['name']
       mail = request.form['mail']
       datos.add_data(user,mail)
-      return render_template('addmailresult.html',name = user, mail = mail) 
+      resultado = True
+      return render_template('addmailform.html',name = user, mail = mail, resultado = resultado) 
    else:
       return render_template('addmailform.html')      
 
